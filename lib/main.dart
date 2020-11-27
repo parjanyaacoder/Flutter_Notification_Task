@@ -49,12 +49,7 @@ class _MyHomePageState extends State<MyHomePage> {
      );
      var iOSData = new IOSNotificationDetails();
      var generalNotificationDetails = new NotificationDetails(android: androidData,iOS: iOSData);
-     await flutterLocalNotificationsPlugin.show(0, "Task", "You achieved", generalNotificationDetails,).then((value) async {
-       Future.delayed(Duration(milliseconds: 30000),(){
-         flutterLocalNotificationsPlugin.cancel(0);
-       });
-
-     });
+     await flutterLocalNotificationsPlugin.show(0, "Task", "You achieved", generalNotificationDetails,);
 
 
    }
